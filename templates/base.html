@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+                .error {
+                    color: red;
+                    font-size: 1.24rem;
+                    font-style: italic;
+                }
+            </style>
+    </head>
+    <body>
+
+        <div>
+            <a href="/blog">Main Blog Page</a>
+            <a href="/newpost">Add a New Post</a>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+            <ul>
+            {% for message in messages %}
+                <li>{{message}}</li>
+            {% endfor %}
+            </ul>
+        {% endwith %}
+        
+        {% block content %}
+        {% endblock %}
+
+
+    </body>
+</html>
