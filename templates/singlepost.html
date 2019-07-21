@@ -4,6 +4,7 @@
 
     <div>
         <h2>{{blog.title}}</h2></a>
+        <p>Written by - <a href="/blog?user={{blog.owner_id}}">{{blog.owner.username}}</a></p>
         <p>{{blog.body}}</p>
         <hr/>
     </div>
